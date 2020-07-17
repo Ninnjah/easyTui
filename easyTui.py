@@ -1,6 +1,7 @@
 import time
-import os
 
+#import os
+#
 #os.system("mode con cols=width lines=height")
 #os.system('color 0A')  0 - BACKGROUND, A - TEXT
 #
