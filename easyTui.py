@@ -1,7 +1,7 @@
 import time
+import os
+import re
 
-#import os
-#
 #os.system("mode con cols=width lines=height")
 #os.system('color 0A')  0 - BACKGROUND, A - TEXT
 #
@@ -19,9 +19,8 @@ import time
 
 def title(title):
     length = len(title) + 6
-    print('=' * length)
-    print('--', title, '--')
-    print('=' * length)
+    titlestr = '=' * length + '\n-- ' + title + ' --\n' + '=' * length
+    print(titlestr)
 
 def label(label):
     length = len(label) + 6
@@ -38,3 +37,14 @@ def updatingScore (name, score, freq):
     print(name, ': ', score, '  ', end='\r')
     time.sleep(freq)
     
+def ul(options):
+    for i in options:
+        print('  -', i)
+    print('-' * 24)
+
+def ol(options):
+    num = 0
+    for i in options:
+        print('  [' + str(num) + ']', i)
+        num += 1
+    print('-' * 24)
