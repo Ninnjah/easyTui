@@ -1,6 +1,5 @@
 import time
 import os
-import re
 
 #os.system("mode con cols=width lines=height")
 #os.system('color 0A')  0 - BACKGROUND, A - TEXT
@@ -20,31 +19,35 @@ import re
 def title(title):
     length = len(title) + 6
     titlestr = '=' * length + '\n-- ' + title + ' --\n' + '=' * length
-    print(titlestr)
+    return titlestr
 
 def label(label):
     length = len(label) + 6
-    print('\n')
-    print(' ', label)
-    print('-' * length)
+    labelstr = '\n ' + label + '\n' + '-' * length + '\n'
+    return labelstr
 
 def score(name, score):
     length = len(name) + len(str(score)) + 10
-    print('\n', name, ': ', score, '  ')
-    print('-'* length)
+    scorestr = name + ': ' + str(score) + '  \n' + '-' * length
+    return scorestr
 
-def updatingScore (name, score, freq):
-    print(name, ': ', score, '  ', end='\r')
+def updScore (name, score, freq):
+    updscorestr = name + ': ' + str(score) + '\r'
     time.sleep(freq)
+    return updscorestr
     
 def ul(options):
+    ulstr = ''
     for i in options:
-        print('  -', i)
-    print('-' * 24)
+        ulstr += '  -' + i + '\n'
+    ulstr += '-' * 24
+    return ulstr
 
 def ol(options):
+    olstr = ''
     num = 0
     for i in options:
-        print('  [' + str(num) + ']', i)
+        olstr += '  [' + str(num) + ']' + i + '\n'
         num += 1
-    print('-' * 24)
+    olstr += '-' * 24
+    return olstr
