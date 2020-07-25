@@ -7,7 +7,7 @@ Very simple TUI module for python
 using
 ```
 import easyTui as tui
-tui.title('Text Sample')
+print(tui.title('Text Sample'))
 
 #Outputs
 #=================
@@ -18,7 +18,7 @@ tui.title('Text Sample')
 using
 ```
 import easyTui as tui
-tui.label('Text Sample')
+print(tui.label('Text Sample'))
 
 #Outputs
 #  Text Sample
@@ -29,7 +29,7 @@ using
 ```
 import easyTui as tui
 val = 5
-tui.score('Text Sample', val)
+print(tui.score('Text Sample', val))
 
 #Outputs
 # Text Sample :  5
@@ -40,16 +40,18 @@ using
 ```
 import easyTui as tui
 val = 5
-tui.updatingScore('Text Sample', val, 1)
+print(tui.updatingScore('Text Sample', val, 1), end='')
 
-#Outputs val, wait for 1 second and \r
-# Text Sample :  5
+#Outputs val, delaied for 1 second and \r
+#Text Sample :  5
+#----------------------
 ```
 -Print Unordered list
 using
 ```
 import easyTui as tui
-tui.ul(['Text Sample', '2 Sample', '3 Sample'])
+list = ['Text Sample', '2 Sample', '3 Sample']
+print(tui.ul(list))
 
 #Outputs
 #  - Text Sample
@@ -61,7 +63,8 @@ tui.ul(['Text Sample', '2 Sample', '3 Sample'])
 using
 ```
 import easyTui as tui
-tui.ol(['Text Sample', '2 Sample', '3 Sample'])
+list = ['Text Sample', '2 Sample', '3 Sample']
+print(tui.ol(list))
 
 #Outputs
 #  [0] Text Sample
