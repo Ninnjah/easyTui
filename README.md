@@ -2,6 +2,11 @@
 
 Very simple TUI module for python
 
+# Installation
+```
+pip install easyTui
+```
+
 ## Capabilities
 -Print title
 using
