@@ -2,7 +2,7 @@
 
 Very simple TUI module for python
 
-# Installation
+Installation:
 ```
 pip install easyTui
 ```
