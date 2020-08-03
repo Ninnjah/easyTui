@@ -45,7 +45,7 @@ using
 ```
 import easyTui as tui
 val = 5
-print(tui.updatingScore('Text Sample', val, 1), end='')
+print(tui.updScore('Text Sample', val, 1), end='')
 
 #Outputs val, delaied for 1 second and \r
 #Text Sample :  5
